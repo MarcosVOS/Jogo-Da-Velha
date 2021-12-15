@@ -1,0 +1,113 @@
+body{
+  text-align: center;
+  background-color: #000000;
+  font-family: 'Dosis', sans-serif;
+}
+
+h1{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #e5e5e5;
+  
+}
+
+@keyframes Neon{
+  to{box-shadow: inset 0 0 1em  #0076a3;}
+  from{box-shadow: inset 0 0 1em #14213d;}
+}
+
+.square{
+  width: 100px;
+  height: 100px;
+  background-color: #14213d;
+  border: 1px solid gray;
+  display: inline-block;
+
+  animation: Neon;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.O{
+  position: relative;
+}
+
+.O:after{
+  position: absolute;
+  content: "\1F6E1";
+  font-size: 50px;
+  line-height: 100px;
+
+  right: 0px;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+}
+
+.X{
+  position: relative;
+}
+
+.X:after{
+  position: absolute;
+  content: "\2694";
+  font-size: 50px;
+  line-height: 100px;
+
+  right: 0px;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+}
+
+button{
+  margin-top: 3vh;
+  width: 300px;
+  height: 80px;
+  border: none;
+  color: #14213d;
+  background-color: #edf2f4;
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 0 #14213d ;
+  transition: ease-out 0.3s;
+  font-size:2rem;
+  outline:none;
+}
+
+button:hover{
+  box-shadow: inset 300px 0 0 0 #14213d;
+  cursor:pointer;
+  color:#000;
+}
+
+.placar{
+  margin-top: 35px;
+}
+
+h4{
+  color: #0e3742;
+  position: relative;
+  display: inline;
+  font-size: 10vh;
+  letter-spacing: 15px;
+  width: 100%;
+  text-align: center;
+  -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+  line-height: 0.70rem;
+  outline: none;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+  0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%{
+    color: #0e3742;
+    text-shadow: none;
+  }
+  18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90.1%,92%,100%{
+    color: #FFF;
+    box-shadow: 0 0 10px #03bcf4,
+    0 0 20px #03bcf4,
+    0 0 40px #03bcf4,
+    0 0 80px #03bcf4,
+    0 0 160px #03bcf4,
+  }
+}
